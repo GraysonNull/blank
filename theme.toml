@@ -1,12 +1,12 @@
-name = "Blank"
+name = "Replicated Docs"
 license = "MIT"
 licenselink = "https://github.com/vimux/blank/blob/master/LICENSE.md"
-description = "Starter Hugo theme for developers."
-homepage = "https://github.com/vimux/blank/"
-tags = ["blog", "plain", "blank", "starter"]
-features = ["blog"]
+description = "Theme for the Replicated docs site."
+homepage = "https://github.com/replicatedhq/blank/"
+tags = []
+features = []
 min_version = 0.19
 
 [author]
-  name = "Vimux"
-  homepage = "https://github.com/vimux"
+  name = "Replicated"
+  homepage = "https://github.com/replicatedhq"
