@@ -34,3 +34,26 @@
   width: 211px;
   height: 78px;
 }
+
+
+.replicatedLogo {
+  background-image: url("../../images/rep_logo@2x.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 180px;
+  height: 41px;
+}
+.kubernetesLogo {
+  background-image: url("../../images/kubernetes_logo@2x.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 92px;
+  height: 89px;
+}
+.dockerSwarmLogo {
+  background-image: url("../../images/ds_logo@2x.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 101px;
+  height: 79px;
+}
