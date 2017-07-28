@@ -9,6 +9,7 @@
 @import "./utilities/icons.css";
 
 @import "./sections/header.css";
+@import "./sections/footer.css";
 @import "./sections/search.css";
 @import "./sections/quicklinks.css";
 @import "./sections/guideblocks.css";
