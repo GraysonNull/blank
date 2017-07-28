@@ -1,10 +1,8 @@
 {{ partial "header.html" . }}
 	<main>
-		{{ $paginator := .Paginate (where .Site.Pages "Type" "post") }}
-		{{ range $paginator.Pages }}
-			{{ partial "summary.html" . }}
-		{{ end }}
-		{{ partial "pagination.html" . }}
+		{{ partial "search_section.html" . }}
+		<div class="filler"></div>
+		{{ partial "howto_section.html" . }}
+		{{ partial "documentation_reference_section.html" . }}
 	</main>
-{{ partial "sidebar.html" . }}
 {{ partial "footer.html" . }}

@@ -1,6 +1,10 @@
 @import "./utilities/reset.css";
 @import "./utilities/base.css";
+@import "./utilities/gradients.css";
 @import "./utilities/utilities.css";
 @import "./utilities/typography.css";
 @import "./utilities/colors.css";
 @import "./utilities/flexbox.css";
+
+@import "./sections/header.css";
+@import "./sections/search.css";
