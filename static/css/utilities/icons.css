@@ -18,3 +18,19 @@
   width: 46px;
   height: 48px;
 }
+
+.icon.u-starterWings {
+  background-position: 0 -256px;
+  width: 200px;
+  height: 61px;
+}
+.icon.u-intermediateWings {
+  background-position: 0 -319px;
+  width: 211px;
+  height: 61px;
+}
+.icon.u-advancedWings {
+  background-position: 0 -382px;
+  width: 211px;
+  height: 78px;
+}

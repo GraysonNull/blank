@@ -38,6 +38,12 @@ code {
   margin: 0;
 }
 
+.header-wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+}
+
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder,
 input:-moz-placeholder,
