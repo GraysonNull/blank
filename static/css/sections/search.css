@@ -1,9 +1,15 @@
+.search.main-section {
+  min-height: 250px;
+}
+.search.main-section h1 {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
 .search-wrapper {
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
 }
-
 .search-wrapper input {
   width: 100%;
 }
@@ -28,4 +34,5 @@
   height: 40px;
   padding: 0 15px;
   font-size: 14px;
+  height: 40px;
 }

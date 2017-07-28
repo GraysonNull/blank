@@ -38,6 +38,12 @@ code {
   margin: 0;
 }
 
+.header-wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+}
+
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder,
 input:-moz-placeholder,
@@ -53,7 +59,7 @@ all you need to do is supply a `width: [value]` `height: [value]`
 and `background-position: [value]`
 */
 .icon {
-  background-image: url("../../images/spritesheets/main_spritesheet.svg");
+  background-image: url("../../images/main_spritesheet.svg");
   background-repeat: no-repeat;
   background-size: initial;
   display: inline-block;
@@ -83,7 +89,6 @@ and `background-position: [value]`
 @media screen and (min-width: 64em) {
   .container { padding: 0 30px; }
   .main-section { padding: 60px 0 70px; }
-  .main-section.search { padding-top: 80px; }
 }
 
 /* ≥ 1280px */
