@@ -1,0 +1,20 @@
+.guides-block-wrapper {
+  margin-top: 50px;
+  margin-left: -14px;
+  margin-right: -14px;
+}
+.guide-block-wrapper {
+  padding-left: 14px;
+  padding-right: 14px;
+}
+.guide-block {
+  background-color: #ffffff;
+  padding: 22px 20px;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0 0 4px rgba(0,0,0,0.16);
+}
+.guide-block .icon-wrapper {
+  min-height: 78px;
+  margin-bottom: 30px;
+}
