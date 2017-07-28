@@ -1,0 +1,20 @@
+.icon.u-guidesIcon {
+  background-position: 0 0;
+  width: 46px;
+  height: 43px;
+}
+.icon.u-documentationIcon {
+  background-position: 0 -45px;
+  width: 35px;
+  height: 42px;
+}
+.icon.u-apiReferenceIcon {
+  background-position: 0 -89px;
+  width: 42px;
+  height: 49px;
+}
+.icon.u-contactIcon {
+  background-position: 0 -140px;
+  width: 46px;
+  height: 48px;
+}

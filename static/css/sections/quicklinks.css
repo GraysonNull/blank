@@ -1,0 +1,31 @@
+.quicklinks-wrapper {
+  position: relative;
+  z-index: 110;
+  margin-top: -120px;
+}
+.quicklinks-blocks-wrapper {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.quicklink-block-wrapper {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.quicklink-block {
+  background-color: #ffffff;
+  padding: 22px 20px;
+  border-radius: 6px;
+  border: 1px solid #C4C7CA;
+  text-align: center;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  transition: all .2s;
+}
+.quicklink-block:hover {
+  cursor: pointer;
+  box-shadow: 0 0 0 1px rgba(26, 27, 31, .05), 0 5px 24px 0 rgba(0, 0, 0, .09);
+}
+.quicklink-block .icon-wrapper {
+  min-height: 51px;
+  margin-bottom: 14px;
+}

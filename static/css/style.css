@@ -5,6 +5,8 @@
 @import "./utilities/typography.css";
 @import "./utilities/colors.css";
 @import "./utilities/flexbox.css";
+@import "./utilities/icons.css";
 
 @import "./sections/header.css";
 @import "./sections/search.css";
+@import "./sections/quicklinks.css";
