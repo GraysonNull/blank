@@ -1,5 +1,38 @@
 	<footer>
 		<p>&copy; {{ now.Year }} <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></p>
 	</footer>
+
+	<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+	<script>
+		const results = document.getElementById("instantSearchResults");
+		const searchBox = document.getElementById("search-box");
+		
+		const client = algoliasearch('5PHVQPX4AR', '92575152510e5cdaf7a0df17c446d879');
+		const index = client.initIndex('help_center');
+
+		// Autocomplete search bar
+		var suggestions = [];
+		autocomplete('#search-box', { hint: false }, [
+			{
+				source: autocomplete.sources.hits(index, { hitsPerPage: 5 }),
+				displayKey: 'title',
+				templates: {
+					header: '<div>Other (<span id="result-count"></span>)</div>',
+					suggestion: function(suggestion) {
+						suggestions.push(suggestion);
+						return '<span>' +
+							suggestion._highlightResult.title.value + '</span>'
+					}
+				}
+			}
+		]).on('autocomplete:updated', () => { 
+			const resultCount = document.getElementById("result-count");
+			if(resultCount) {
+				resultCount.innerHTML = '' + suggestions.length + '';
+			}
+		} );
+
+  	</script>
 </body>
 </html>
