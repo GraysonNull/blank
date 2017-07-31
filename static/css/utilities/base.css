@@ -28,12 +28,14 @@ code {
 .container {
   width: 100%;
   max-width: 1040px;
-  padding: 0 20px;
   margin: 0 auto;
+}
+.paddingContainer {
+  padding: 0 20px;
 }
 
 .main-section {
-  padding: 30px 0 40px;
+  padding: 50px 0;
   position: relative;
   margin: 0;
 }
@@ -77,7 +79,6 @@ and `background-position: [value]`
 
 /* ≥ 768px */
 @media screen and (min-width: 48em) {
-
 }
 
 /* ≥ 960px */
@@ -87,7 +88,7 @@ and `background-position: [value]`
 
 /* ≥ 1024px */
 @media screen and (min-width: 64em) {
-  .container { padding: 0 30px; }
+  .paddingContainer { padding: 0 30px; }
   .main-section { padding: 60px 0 70px; }
 }
 

@@ -3,17 +3,12 @@
   border-top: 1px solid #DFDFDF;
   border-bottom: 1px solid #DFDFDF;
 }
-.docs-ref-wrapper {
-  margin-left: -20px;
-  margin-right: -20px;
-}
 .docs-ref-list .doc-ref-list-item {
-  width: 33%;
+  width: 100%;
+  display: inline-block;
 }
 .doc-ref {
-  margin-top: 50px;
-  padding-left: 20px;
-  padding-right: 20px; 
+  margin-top: 40px;
 }
 .doc-ref p {
   line-height: 1;
@@ -37,4 +32,34 @@
   background-color: #2A98CB;
   left: 10px;
   top: 6px;
+}
+
+/* ≥ 568px */
+@media screen and (min-width: 35.5em) {
+  .docs-ref-list .doc-ref-list-item {
+    width: 50%;
+  }
+  .doc-ref {
+    margin-top: 50px;
+    padding-right: 40px; 
+  }
+  .doc-ref-list-item:nth-child(2n) .doc-ref {
+    padding-right: 0;
+  }
+}
+
+/* ≥ 768px */
+@media screen and (min-width: 48em) {
+  .docs-ref-list .doc-ref-list-item {
+    width: 33%;
+  }
+  .doc-ref {
+    padding-right: 40px;
+  }
+  .doc-ref-list-item:nth-child(2n) .doc-ref {
+    padding-right: 40px;
+  }
+  .doc-ref-list-item:nth-child(3n) .doc-ref {
+    padding-right: 0;
+  }
 }
