@@ -78,8 +78,12 @@
   color: #9B9B9B;
 }
 
-#search-box {
-  width: 100%;
+.search-box {
+  width: 960px;
+  box-sizing: border-box;
+  height: 40px;
+  padding: 0 15px;
+  font-size: 14px;
   height: 40px;
 }
 
