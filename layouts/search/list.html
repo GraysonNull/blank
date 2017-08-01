@@ -1,0 +1,18 @@
+{{ partial "header.html" . }}
+	<main>
+		{{ partial "instantsearch_section.html" . }}
+		<div id="hits-per-page"></div> 
+		<div class="container">
+			<div class="search-results">
+				<div id="docs-hits">
+					<!-- Hits widget will appear here -->
+				</div>
+			</div>
+			<div class="search-results">
+				<div id="other-hits">
+					<!-- Hits widget will appear here -->
+				</div>
+			</div>
+		</div>
+	</main>
+{{ partial "footer.html" . }}

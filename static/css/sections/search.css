@@ -78,7 +78,7 @@
   color: #9B9B9B;
 }
 
-#search-box {
+.search-box {
   width: 960px;
   box-sizing: border-box;
   height: 40px;
