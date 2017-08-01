@@ -3,13 +3,8 @@
   z-index: 1;
   margin-top: -120px;
 }
-.quicklinks-blocks-wrapper {
-  margin-left: -10px;
-  margin-right: -10px;
-}
 .quicklink-block-wrapper {
-  padding-left: 10px;
-  padding-right: 10px;
+  margin-top: 20px;
 }
 .quicklink-block {
   background-color: #ffffff;
@@ -28,4 +23,22 @@
 .quicklink-block .icon-wrapper {
   min-height: 51px;
   margin-bottom: 14px;
+}
+
+/* ≥ 768px */
+@media screen and (min-width: 48em) {
+  .quicklink-block-wrapper {
+    padding-right: 10px;
+    margin-top: 0;
+  }
+  .quicklink-block-wrapper:last-child {
+    padding-right: 0;
+  }
+}
+
+/* ≥ 960px */
+@media screen and (min-width: 60em) {
+  .quicklink-block-wrapper {
+    padding-right: 20px;
+  }
 }
