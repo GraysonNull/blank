@@ -1,27 +1,75 @@
 nav {
-  background: rgba(255,255,255,.2);
+  background: #BC0000;
   padding: 15px 0 13px;
-  position: absolute;
+  position: fixed;
   width: 100%;
+  top: 0;
   z-index: 200;
 }
 
 nav ul li {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 30px;
-}
-nav ul li:last-child {
-  margin-right: 0;
+  display: block;
 }
 nav ul li a {
-  color: rgba(255,255,255,.8);
+  color: #ffffff;
   font-weight: 400;
   font-size: 14px;
-  -webkit-transition: color .2s;
-  -moz-transition: color .2s;
-  transition: color .2s;
+  padding: 10px 0;
+  display: block;
 }
-nav ul li:hover a {
-  color: #ffffff;
+.logo-link {
+  display: inline-block;
+  padding: 0;
+}
+nav ul ul {
+  border-top: 1px solid #ffffff;
+  padding-top: 10px;
+  margin-top: 16px;
+  display: none;
+}
+nav ul ul.show {
+  display: block;
+}
+#toggleNav {
+  width: 23px;
+  height: 14px;
+  background-color: #ffffff;
+  position: absolute;
+  right: 20px;
+  top: 12px;
+  z-index: 210;
+}
+
+/* ≥ 768px */
+@media screen and (min-width: 48em) {
+  nav {
+    background: rgba(255,255,255,.2);
+    position: absolute;
+  }
+  nav ul li {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0;
+    margin-right: 30px;
+  }
+  nav ul li:last-child {
+    margin-right: 0;
+  }
+  nav ul li a {
+    color: rgba(255,255,255,.8);
+    font-weight: 400;
+    font-size: 14px;
+    -webkit-transition: color .2s;
+    -moz-transition: color .2s;
+    transition: color .2s;
+  }
+  nav ul li:hover a {
+    color: #ffffff;
+  }
+  nav ul ul.header-links {
+    display: inline-block;
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+  }
 }

@@ -14,16 +14,19 @@
 <body>
 	<header>
 		<nav>
-			<div class="container">
-				<ul class="paddingContainer">
+			<div class="container u-position--relative">
+				<span id="toggleNav" class="u-show--mobileTablet"></span>
+				<ul class="nav-list paddingContainer">
 					<li>
-						<a href="{{ .Site.BaseURL }}">
+						<a class="logo-link" href="{{ .Site.BaseURL }}">
 							<img width="109" src="{{ .Site.BaseURL }}images/logo@2x.png"/>
 						</a>
 					</li>
-					{{ range .Site.Menus.main }}
-						<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-					{{ end }}
+					<ul class="header-links">
+						{{ range .Site.Menus.main }}
+							<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+						{{ end }}
+					</ul>
 				</ul>
 			</div>
 		</nav>
