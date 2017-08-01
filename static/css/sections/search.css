@@ -45,8 +45,10 @@
 .aa-suggestion {
   padding: 10px 15px;
   border-bottom: 1px solid rgba(155, 155, 155, .4);
-  min-height: 43px;
   cursor: pointer;
+}
+.aa-suggestion:last-child {
+  border-bottom: none;
 }
 
 .aa-dataset-docs .aa-suggestion {
@@ -76,6 +78,14 @@
   line-height: 22px;
   font-size: 12px;
   color: #9B9B9B;
+}
+
+.empty-space {
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -9999px;
+  top: -9999px;
 }
 
 #search-box {

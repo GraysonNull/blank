@@ -63,7 +63,7 @@
 
 						return '<h3 class="aa-suggestion-header">' +
 							suggestion._highlightResult.title.value + '</h3>' +
-							'<p class="aa-suggestion-description">' + (hasDescription ? suggestion._highlightResult.description.value : "") + '</p>'
+							(hasDescription ? '<p class="aa-suggestion-description">' + suggestion._highlightResult.description.value + '</p>' : '<span class="empty-space"></span>') 
 					}
 				},
 				empty: "<div class='aa-empty'>No matching files</div>"
