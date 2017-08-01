@@ -1,3 +1,11 @@
+/* Input */
+
+input {
+  box-sizing: border-box;
+}
+
+/* Buttons */
+
 .Button {
   font-weight: 500;
   cursor: pointer;
