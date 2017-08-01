@@ -31,13 +31,17 @@ nav ul ul.show {
   display: block;
 }
 #toggleNav {
-  width: 23px;
-  height: 14px;
-  background-color: #ffffff;
   position: absolute;
   right: 20px;
-  top: 12px;
+  top: 13px;
   z-index: 210;
+  background-position: -70px 0;
+  width: 23px;
+  height: 14px;
+}
+#toggleNav.open {
+  background-position: -95px 0;
+  width: 14px;
 }
 
 /* ≥ 768px */

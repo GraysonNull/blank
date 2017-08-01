@@ -22,14 +22,14 @@
 	<header>
 		<nav>
 			<div class="container u-position--relative">
-				<span id="toggleNav" class="u-show--mobileTablet"></span>
+				<span id="toggleNav" class="u-show--mobileTablet icon u-cursor--pointer"></span>
 				<ul class="nav-list paddingContainer">
 					<li>
 						<a class="logo-link" href="{{ .Site.BaseURL }}">
 							<img width="109" src="{{ .Site.BaseURL }}images/logo@2x.png"/>
 						</a>
 					</li>
-					<ul class="header-links">
+					<ul id="headerLinks" class="header-links">
 						{{ range .Site.Menus.main }}
 							<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
 						{{ end }}
