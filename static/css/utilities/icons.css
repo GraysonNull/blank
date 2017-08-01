@@ -18,6 +18,16 @@
   width: 46px;
   height: 48px;
 }
+.icon.u-navIcon {
+  background-position: -70px 0;
+  width: 23px;
+  height: 14px;
+}
+.icon.u-closeIconWhite {
+  background-position: -95px 0;
+  width: 14px;
+  height: 14px;
+}
 
 .icon.u-starterWings {
   background-position: 0 -256px;
