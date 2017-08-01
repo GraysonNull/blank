@@ -1,6 +1,6 @@
 .quicklinks-wrapper {
   position: relative;
-  z-index: 110;
+  z-index: 1;
   margin-top: -120px;
 }
 .quicklinks-blocks-wrapper {

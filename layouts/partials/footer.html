@@ -75,29 +75,52 @@
 		const searchBox = document.getElementById("search-box");
 		
 		const client = algoliasearch('5PHVQPX4AR', '92575152510e5cdaf7a0df17c446d879');
-		const index = client.initIndex('help_center');
+		const otherIndex = client.initIndex('help_center_other');
+		const docsIndex = client.initIndex('help_center_docs');
 
 		// Autocomplete search bar
-		var suggestions = [];
-		autocomplete('#search-box', { hint: false }, [
+		autocomplete('#search-box', { hint: false, templates: {
+			dropdownMenu:
+				"<div class='aa-dataset-other'></div>" +
+				"<div class='aa-dataset-docs'></div>"
+		}}, [
 			{
-				source: autocomplete.sources.hits(index, { hitsPerPage: 5 }),
+				source: autocomplete.sources.hits(docsIndex, { hitsPerPage: 5 }),
 				displayKey: 'title',
+				name: 'docs',
 				templates: {
-					header: '<div>Other (<span id="result-count"></span>)</div>',
+					header: '<h2 class="aa-header">Docs</h2>',
 					suggestion: function(suggestion) {
-						suggestions.push(suggestion);
-						return '<span>' +
-							suggestion._highlightResult.title.value + '</span>'
+						const hasDescription = (suggestion._highlightResult).hasOwnProperty("description");
+
+						return '<h3 class="aa-suggestion-header">' +
+							suggestion._highlightResult.title.value + '</h3>' +
+							'<p class="aa-suggestion-description">' + suggestion._highlightResult.description.value + '</p>' +
+							'<span class="icon u-documentationIcon"></span>'
 					}
-				}
+				},
+				empty: "<div class='aa-empty'>No matching files</div>"
+			},
+			{
+				source: autocomplete.sources.hits(otherIndex, { hitsPerPage: 5 }),
+				displayKey: 'title',
+				name: 'other',
+				templates: {
+					header: '<h2 class="aa-header">Other</h2>',
+					suggestion: function(suggestion) {
+						const hasDescription = (suggestion._highlightResult).hasOwnProperty("description");
+
+						return '<h3 class="aa-suggestion-header">' +
+							suggestion._highlightResult.title.value + '</h3>' +
+							'<p class="aa-suggestion-description">' + (hasDescription ? suggestion._highlightResult.description.value : "") + '</p>'
+					}
+				},
+				empty: "<div class='aa-empty'>No matching files</div>"
 			}
-		]).on('autocomplete:updated', () => { 
-			const resultCount = document.getElementById("result-count");
-			if(resultCount) {
-				resultCount.innerHTML = '' + suggestions.length + '';
-			}
-		} );
+		]).on('autocomplete:selected', function(e, suggestion, dataset) {
+			// Fix for weird bug that places <em> tags in uri
+			window.location = suggestion._highlightResult.uri.value.replace(/<\/?[^>]+(>|$)/g, "");
+		});
 
   	</script>
 </body>
