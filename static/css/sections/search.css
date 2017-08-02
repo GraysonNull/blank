@@ -12,6 +12,7 @@
 }
 .search-wrapper input {
   width: 100%;
+  padding: 0 15px;
 }
 
 .algolia-autocomplete {
@@ -78,12 +79,13 @@
   color: #9B9B9B;
 }
 
-.search-box {
-  width: 960px;
+.search-box,
+.ais-search-box {
+  width: 100%;
   box-sizing: border-box;
   height: 40px;
-  padding: 0 15px;
   font-size: 14px;
   height: 40px;
+  max-width: 100%;
 }
 
