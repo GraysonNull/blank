@@ -47,7 +47,6 @@ nav ul ul.show {
 /* ≥ 768px */
 @media screen and (min-width: 48em) {
   nav {
-    background: rgba(255,255,255,.2);
     position: absolute;
   }
   nav ul li {
