@@ -1,0 +1,11 @@
+.instant-search .container {
+    max-width: 960px;
+    padding: 40px 15px;
+}
+.instant-search .container h2 {
+    font-size: 28px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(155, 155, 155, .4);
+    margin-bottom: 20px;
+    font-weight: bold;
+}

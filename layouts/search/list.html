@@ -1,8 +1,12 @@
 {{ partial "header.html" . }}
-	<main>
+	<main class="instant-search">
 		{{ partial "instantsearch_section.html" . }}
 		<div id="hits-per-page"></div> 
 		<div class="container">
+			<h2>Search Results</h2>
+			<div class="counts">
+				<h3><span id="result-count">O</span> results <span id="search-made"></span></h3>
+			</div>
 			<div class="search-results">
 				<div id="docs-hits">
 					<!-- Hits widget will appear here -->
