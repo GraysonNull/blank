@@ -22,7 +22,7 @@ autocomplete('#autocompletesearch-box', {
 
                 return '<h3 class="aa-suggestion-header">' +
                     suggestion._highlightResult.title.value + '</h3>' +
-                    '<p class="aa-suggestion-description">' + suggestion._highlightResult.description.value + '</p>' +
+                    '<p class="aa-suggestion-description">' + (hasDescription ? suggestion._highlightResult.description.value : "") + '</p>' +
                     '<span class="icon u-documentationIcon"></span>'
             }
         },
