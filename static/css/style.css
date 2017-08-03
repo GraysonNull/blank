@@ -8,6 +8,8 @@
 @import "./utilities/flexbox.css";
 @import "./utilities/icons.css";
 
+@import "./pages/instantsearch.css";
+@import "./pages/single.css";
 @import "./sections/header.css";
 @import "./sections/footer.css";
 @import "./sections/search.css";
@@ -15,5 +17,4 @@
 @import "./sections/guideblocks.css";
 @import "./sections/documentation_reference.css";
 @import "./sections/schedulers.css";
-@import "./pages/instantsearch.css";
 @import "./sections/guides.css";

@@ -1,0 +1,119 @@
+.single .main-section {
+    min-height: 220px;
+    box-sizing: border-box;
+}
+
+.single .main-section h1 {
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+
+.single .container {
+    max-width: 960px;
+}
+
+.content {
+    padding: 50px 0;
+    max-width: 750px;
+}
+
+.content h2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 20px 0;
+}
+
+.content h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 20px 0;
+}
+
+.content p {
+    font-size: 14px;
+    color: #9B9B9B;
+    line-height: 1.4em;
+    margin: 20px 0;
+}
+
+.content a {
+    color: #2A98CB;
+    font-weight: 500;
+}
+
+.content pre {
+    padding: 20px;
+    margin: 40px 0;
+    background-color: #f9f2f4;
+    overflow: scroll;
+    border-radius: 6px;
+}
+
+.content table {
+    border-radius: 6px;
+    border-collapse: initial;
+    border: solid 1px #C4C7CA;
+    margin: 40px 0;
+}
+
+.content table thead {
+    background: #F5F8FC;
+    text-align: left;
+}
+
+.content table thead th {
+    font-weight: 500;
+}
+
+.content table td {
+    color: #9B9B9B;
+    border-bottom: solid 1px #C4C7CA;
+}
+
+.content tbody tr:last-child td {
+    border: 0;
+}
+
+.content table th,
+.content table td {
+    padding: 15px 20px;
+    font-size: 14px;
+}
+
+.content .page-notes {
+    padding: 15px 20px;
+    background: #2A98CB;
+    color: white;
+    font-size: 14px;
+    margin: 40px 0;
+    border-radius: 6px;
+}
+
+
+.content .page-notes h3 {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.content ul,
+.content ol {
+    padding-left: 20px;
+}
+
+.content ul {
+    list-style-type: disc;
+}
+
+.content ol {
+    list-style-type: decimal;
+}
+
+.content ul li ,
+.content ol li {
+    padding: 5px 0;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #9B9B9B;
+}
+
+

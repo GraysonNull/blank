@@ -1,10 +1,21 @@
 {{ partial "header.html" . }}
 	<main>
-		<article>
-			<h1>{{ .Title }}</h1>
-			<time>{{ .Date.Format "02.01.2006 15:04" }}</time>
-			<div>
-				{{ .Content }}
+		<article class="single">
+			<div class="u-gradient--redToRed main-section">
+				<div class="container">
+					<h1 class="u-color--white u-fontWeight--bold u-fontSize--header u-textAlign--left">
+						{{ .Title }}
+					</h1>
+					<p class="u-color--white u-fontSize--large u-lineHeight--normal">
+						{{ .Description }}
+						<span class="u-fontSize--small">(Last Updated {{ .Date.Format "02.01.2006 15:04" }})</span>
+					</p>
+				</div>
+			</div>
+			<div class="container">
+				<div class="content">
+					{{ .Content }}
+				</div>
 			</div>
 			<div>
 				<ul id="tags">
@@ -18,5 +29,4 @@
 			</div>
 		</article>
 	</main>
-{{ partial "sidebar.html" . }}
 {{ partial "footer.html" . }}

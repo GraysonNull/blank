@@ -21,7 +21,7 @@ otherSearch.addWidget(searchBox);
 docsSearch.addWidget(
     instantsearch.widgets.hits({
         container: '#docs-hits',
-        hitsPerPage: 5,
+        hitsPerPage: 10,
         templates: {
             item: function(suggestion) {
                 const hasDescription = (suggestion._highlightResult).hasOwnProperty("description");
