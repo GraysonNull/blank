@@ -14,10 +14,6 @@ const searchBox = instantsearch.widgets.searchBox({
     container: '#instantsearch-box'
 });
 
-const statsContainer = instantsearch.widgets.stats({
-    container: '#stats-container'
-})
-
 docsSearch.addWidget(searchBox);
 otherSearch.addWidget(searchBox);
 
@@ -31,7 +27,8 @@ docsSearch.addWidget(
                 const hasDescription = (suggestion._highlightResult).hasOwnProperty("description");
 
                 return '<h3>' +  suggestion._highlightResult.title.value.replace(/<\/?[^>]+(>|$)/g, "") + '</h3>' + 
-                '<p>'+ (hasDescription ? suggestion._highlightResult.description.value : "") + '</p>'
+                '<p>'+ (hasDescription ? suggestion._highlightResult.description.value : "") + '</p>' +
+                 '<span class="icon u-documentationIcon"></span>'
             }
         }
     })
@@ -54,10 +51,17 @@ otherSearch.addWidget(
 
 const renderHandler = function() {
     const resultCount = document.getElementById("result-count");
+    const docsCount = document.getElementById("docs-count");
+    const otherCount = document.getElementById("other-count");
     const searchMade = document.getElementById("search-made")
 
     const searchBoxValue = document.getElementById("instantsearch-box").value;
     const items = document.getElementsByClassName('ais-hits--item');
+    const docsItems = document.getElementById("docs-hits").getElementsByTagName("div");
+    const otherItems = document.getElementById("other-hits").getElementsByTagName("div");
+
+    docsCount.innerHTML = getNumberOfHits(docsItems);
+    otherCount.innerHTML = getNumberOfHits(otherItems);
 
     resultCount.innerHTML = items.length;
     
@@ -66,6 +70,17 @@ const renderHandler = function() {
     } else {
         searchMade.innerHTML = "";
     }
+}
+
+const getNumberOfHits = function(items) {
+    let count = 0;
+    for (item of items) {
+        if(item.getAttribute('class') == "ais-hits--item") {
+            count++;
+        }
+    }
+    
+    return count;
 }
 
 // Only need to listen for both once, then items can be
