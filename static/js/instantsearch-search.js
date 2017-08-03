@@ -26,9 +26,9 @@ docsSearch.addWidget(
             item: function(suggestion) {
                 const hasDescription = (suggestion._highlightResult).hasOwnProperty("description");
 
-                return '<h3>' +  suggestion._highlightResult.title.value.replace(/<\/?[^>]+(>|$)/g, "") + '</h3>' + 
+                return '<div class="wrapper" data-href="' + suggestion._highlightResult.uri.value + '" >' + '<h3>' +  suggestion._highlightResult.title.value.replace(/<\/?[^>]+(>|$)/g, "") + '</h3>' + 
                 '<p>'+ (hasDescription ? suggestion._highlightResult.description.value : "") + '</p>' +
-                 '<span class="icon u-documentationIcon"></span>'
+                 '<span class="icon u-documentationIcon"></span>' + '</div>' 
             }
         }
     })
@@ -42,8 +42,8 @@ otherSearch.addWidget(
             item: function(suggestion) {
                 const hasDescription = (suggestion._highlightResult).hasOwnProperty("description");
 
-                return '<h3>' +  suggestion._highlightResult.title.value.replace(/<\/?[^>]+(>|$)/g, "") + '</h3>' + 
-                '<p>'+ (hasDescription ? suggestion._highlightResult.description.value : "") + '</p>'
+                return '<div class="wrapper" data-href="' + suggestion._highlightResult.uri.value + '" >' + '<h3>' +  suggestion._highlightResult.title.value.replace(/<\/?[^>]+(>|$)/g, "") + '</h3>' + 
+                '<p>'+ (hasDescription ? suggestion._highlightResult.description.value : "") + '</p>' + '</div>'
             }
         }    
     })
@@ -64,12 +64,23 @@ const renderHandler = function() {
     otherCount.innerHTML = getNumberOfHits(otherItems);
 
     resultCount.innerHTML = items.length;
+
+    for(item of items) {
+        item.addEventListener('click', itemClickHandler, false);
+    }
     
     if(searchBoxValue !== "") {
         searchMade.innerHTML = "for " + searchBoxValue;
     } else {
         searchMade.innerHTML = "";
     }
+}
+
+const itemClickHandler = function(e) {
+    const pathDiv = this.firstChild;
+    const path = pathDiv.getAttribute("data-href");
+
+    window.location.href = window.location.origin + '/' + path.replace(/<\/?[^>]+(>|$)/g, "");
 }
 
 const getNumberOfHits = function(items) {
