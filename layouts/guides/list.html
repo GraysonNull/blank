@@ -1,8 +1,49 @@
 {{ partial "header.html" . }}
 	<main>
-		{{ partial "quicklink_blocks.html" . }}
-		{{ partial "howto_section.html" . }}
-		{{ partial "documentation_reference_section.html" . }}
-		{{ partial "scheduler_section.html" . }}
+		  <div class="page-header u-gradient--orangeToOrange main-section flex-column flex1 justifyContent--center">
+				<div class="container u-marginTop--most">
+					<div class="flex flex-auto justifyContent--center u-marginTop--more">
+						<div class="flex-auto">
+							<span class="icon u-guidesHeaderIcon u-marginRight--normal"></span>
+						</div>
+						<div class="flex-auto">
+							<h3 class="u-color--white u-fontWeight--bold u-fontSize--header">Guides</h3>
+							<p class="u-fontSize--normal u-fontWeight--medium u-color--white u-marginTop--small">Step-by-step guides for all things Replicated.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="chapter-block-section">
+				<div class="container">
+					<div class="paddingContainer">
+						{{ range .Params.guides }}
+							<div class="chapter-block u-flexTabletReflow flex1">
+								<div class="flex1 flex-column chapter-block-content-wrapper justifyContent--center">
+									<span class="icon u-{{ .level }}Wings u-marginBottom--more"></span>
+									<p class="u-fontSize--largest u-fontWeight--medium u-color--tuna u-lineHeight--default u-marginBottom--normal">{{ .title }}<p>
+									<p class="u-fontSize--large u-color--dustyGray u-lineHeight--normal">{{ .description }}<p>
+								</div>
+								<div class="flex1 flex-column chapter-block-tutorials-wrapper justifyContent--center">
+									<div class="chapter-block-tutorials">
+										{{ if gt (len .chapters) 7}}
+										<ul class="scrollable">
+										{{ else }}
+										<ul>
+										{{ end }}
+											{{ range .chapters }}
+												<li>
+													<a href="{{ .chapter_url }}" class="u-color--curiousBlue u-textDecoration--underlineOnHover">
+														{{ .chapter_title }}
+													</a>
+												</li>
+											{{ end }}
+										</ul>
+									</div>
+								</div>
+							</div>
+						{{ end }}
+					</div>
+				</div>
+			</div>
 	</main>
 {{ partial "footer.html" . }}
