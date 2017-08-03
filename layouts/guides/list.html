@@ -1,26 +1,49 @@
 {{ partial "header.html" . }}
-	<main class="instant-search">
-		{{ partial "instantsearch_section.html" . }}
-		<div id="hits-per-page"></div> 
-		<div class="container">
-			<h2>Search Results</h2>
-			<div id="stats-container"></div>
-			<div class="counts">
-				<h3><span id="result-count">O</span> results <span id="search-made"></span></h3>
-			</div>
-			<div class="search-results">
-				<div id="docs-hits">
-					<!-- Hits widget will appear here -->
+	<main>
+		  <div class="page-header u-gradient--orangeToOrange main-section flex-column flex1 justifyContent--center">
+				<div class="container u-marginTop--most">
+					<div class="flex flex-auto justifyContent--center u-marginTop--more">
+						<div class="flex-auto">
+							<span class="icon u-guidesHeaderIcon u-marginRight--normal"></span>
+						</div>
+						<div class="flex-auto">
+							<h3 class="u-color--white u-fontWeight--bold u-fontSize--header">Guides</h3>
+							<p class="u-fontSize--normal u-fontWeight--medium u-color--white u-marginTop--small">Step-by-step guides for all things Replicated.</p>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="search-results">
-				<div id="other-hits">
-					<!-- Hits widget will appear here -->
+			<div class="chapter-block-section">
+				<div class="container">
+					<div class="paddingContainer">
+						{{ range .Params.guides }}
+							<div class="chapter-block u-flexTabletReflow flex1">
+								<div class="flex1 flex-column chapter-block-content-wrapper justifyContent--center">
+									<span class="icon u-{{ .level }}Wings u-marginBottom--more"></span>
+									<p class="u-fontSize--largest u-fontWeight--medium u-color--tuna u-lineHeight--default u-marginBottom--normal">{{ .title }}<p>
+									<p class="u-fontSize--large u-color--dustyGray u-lineHeight--normal">{{ .description }}<p>
+								</div>
+								<div class="flex1 flex-column chapter-block-tutorials-wrapper justifyContent--center">
+									<div class="chapter-block-tutorials">
+										{{ if gt (len .chapters) 7}}
+										<ul class="scrollable">
+										{{ else }}
+										<ul>
+										{{ end }}
+											{{ range .chapters }}
+												<li>
+													<a href="{{ .chapter_url }}" class="u-color--curiousBlue u-textDecoration--underlineOnHover">
+														{{ .chapter_title }}
+													</a>
+												</li>
+											{{ end }}
+										</ul>
+									</div>
+								</div>
+							</div>
+						{{ end }}
+					</div>
 				</div>
 			</div>
-		</div>
 	</main>
-
-<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.js"></script>
-<script src="{{ .Site.BaseURL }}js/instantsearch-search.js"></script>
 {{ partial "footer.html" . }}
