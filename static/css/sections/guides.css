@@ -1,0 +1,78 @@
+.page-header {
+  min-height: 142px;
+}
+.chapter-block-section {
+  padding-top: 10px;
+  padding-bottom: 60px;
+}
+.chapter-block {
+  padding: 20px;
+  border: 1px solid #C4C7CA;
+  border-radius: 6px;
+  margin-top: 50px;
+}
+.chapter-block-content-wrapper {
+  max-width: 380px;
+}
+.chapter-block-tutorials-wrapper {
+  margin-top: 20px;
+}
+.chapter-block-tutorials {
+  background-color: #F5F8FC;
+  border-radius: 6px;
+  padding: 20px 20px 4px;
+  overflow: hidden;
+}
+.chapter-block ul {
+  position: relative;
+  overflow: auto;
+}
+.chapter-block ul li {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+  padding-left: 30px;
+  padding-bottom: 16px;
+  position: relative;
+}
+.chapter-block ul li::before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background-color: #2A98CB;
+  left: 10px;
+  top: 6px;
+}
+
+/* ≥ 568px */
+@media screen and (min-width: 35.5em) {
+  .chapter-block ul {
+    height: 160px;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-fill: auto;
+    -moz-column-fill: auto;
+    column-fill: auto;
+  }
+}
+
+/* ≥ 768px */
+@media screen and (min-width: 48em) {
+  .chapter-block {
+    padding: 30px;
+  }
+  /* .chapter-block ul.scrollable::before {
+    width: 40px;
+    height: 100%;
+    position: absolute;
+    content: "";
+  } */
+  .chapter-block-tutorials-wrapper {
+    margin-top: 0;
+    margin-left: 20px;
+  }
+}

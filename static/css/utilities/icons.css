@@ -29,7 +29,7 @@
   height: 14px;
 }
 
-.icon.u-starterWings {
+.icon.u-beginnerWings {
   background-position: 0 -256px;
   width: 200px;
   height: 61px;
@@ -44,7 +44,11 @@
   width: 211px;
   height: 78px;
 }
-
+.icon.u-guidesHeaderIcon {
+  background-position: -70px -16px;
+  width: 60px;
+  height: 56px;
+}
 
 .replicatedLogo {
   background-image: url("../../images/rep_logo@2x.png");
