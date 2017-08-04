@@ -47,6 +47,55 @@
   top: 6px;
 }
 
+/* Single guides page */
+
+.single .right-block {
+  margin-top: 40px;
+}
+
+.guide-chapters-wrapper ul {
+  counter-reset: list;
+}
+.guide-chapters-wrapper ul li a {
+  margin-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  border-bottom: 1px solid #C4C7CA;
+  position: relative;
+  display: block;
+}
+.guide-chapters-wrapper ul li a::before {
+  counter-increment: list;
+  content: counter(list);
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 30px;
+  text-align: center;
+  color: #2A98CB;
+  width: 30px;
+  height: 30px;
+  background-color: #F5F8FC;
+  border-radius: 100%;
+}
+.guide-chapters-wrapper ul li:first-child a {
+  margin-top: 0;
+}
+.guide-chapters-wrapper ul li:last-child a {
+  border-bottom: none;
+}
+.guide-chapters-wrapper li a .chapter-title {
+  color: #323232;
+  -webkit-transition: color .2s;
+  -moz-transition: color .2s;
+  transition: color .2s;
+}
+.guide-chapters-wrapper li a:hover .chapter-title {
+  color: #2A98CB;
+}
+
 /* ≥ 568px */
 @media screen and (min-width: 35.5em) {
   .chapter-block ul {
@@ -65,14 +114,15 @@
   .chapter-block {
     padding: 30px;
   }
-  /* .chapter-block ul.scrollable::before {
-    width: 40px;
-    height: 100%;
-    position: absolute;
-    content: "";
-  } */
   .chapter-block-tutorials-wrapper {
     margin-top: 0;
     margin-left: 20px;
+  }
+  .single .left-block {
+    padding-right: 40px;  
+  }
+  .single .right-block {
+    margin-top: 0;
+    padding-left: 40px;  
   }
 }
