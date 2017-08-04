@@ -16,13 +16,13 @@
 				<div class="content">
 					{{ .Content }}
 				</div>
-			</div>
-			<div>
+				<div class="sidebar">
 				<ul id="tags">
 					{{ range .Params.tags }}
 					<li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> </li>
 					{{ end }}
 				</ul>
+			</div>
 			</div>
 			<div>
 				{{ template "_internal/disqus.html" . }}
