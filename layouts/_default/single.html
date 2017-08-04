@@ -2,7 +2,7 @@
 	<main>
 		<article class="single">
 			<div class="u-gradient--redToRed main-section">
-				<div class="container">
+				<div class="container u-padding--normal">
 					<h1 class="u-color--white u-fontWeight--bold u-fontSize--header u-textAlign--left">
 						{{ .Title }}
 					</h1>
@@ -12,17 +12,22 @@
 					</p>
 				</div>
 			</div>
-			<div class="container">
+			<div class="container u-padding--normal flex">
 				<div class="content">
 					{{ .Content }}
 				</div>
-				<div class="sidebar">
-				<ul id="tags">
-					{{ range .Params.tags }}
-					<li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> </li>
-					{{ end }}
-				</ul>
-			</div>
+				<div class="sidebar u-marginLeft--more u-marginTop--more">
+					<div>
+						<h3 class="u-fontWeight--medium u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Tags</h3>
+						<ul id="tags">
+						{{ range .Params.tags }}
+						<li class="u-display--inlineBlock">
+							<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="u-display--inlineBlock">{{ . }}</a>
+						</li>
+						{{ end }}
+					</ul>
+					</div>
+				</div>
 			</div>
 			<div>
 				{{ template "_internal/disqus.html" . }}
