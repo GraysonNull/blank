@@ -9,7 +9,7 @@
 }
 
 .single .container {
-    max-width: 960px;
+    max-width: 1020px;
 }
 
 .content {
@@ -39,6 +39,9 @@
 .content a {
     color: #2A98CB;
     font-weight: 500;
+}
+.content a:hover {
+    text-decoration: underline;
 }
 
 .content pre {
@@ -86,17 +89,19 @@
 
 .content .page-notes {
     padding: 15px 20px;
-    background: #2A98CB;
-    color: white;
+    background: #F7F7F7;
+    border: 1px solid #C4C7CA;
+    color: #9B9B9B;
     font-size: 14px;
     margin: 40px 0;
+    font-weight: 500;
     border-radius: 6px;
 }
 
-
 .content .page-notes h3 {
-    font-weight: 500;
     font-size: 18px;
+    color: #323232;
+    margin: 0 0 6px;
 }
 
 .content ul,
@@ -114,9 +119,9 @@
 
 .content ul li ,
 .content ol li {
-    padding: 5px 0;
+    padding: 10px 0;
     font-size: 14px;
-    line-height: 1.4;
+    line-height: 22px;
     color: #9B9B9B;
 }
 
