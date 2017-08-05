@@ -15,33 +15,25 @@
 			</div>
 			<div class="chapter-block-section">
 				<div class="container">
-					<div class="paddingContainer">
-						{{ range .Params.guides }}
-							<div class="chapter-block u-flexTabletReflow flex1">
-								<div class="flex1 flex-column chapter-block-content-wrapper justifyContent--center">
-									<span class="icon u-{{ .level }}Wings u-marginBottom--more"></span>
-									<p class="u-fontSize--largest u-fontWeight--medium u-color--tuna u-lineHeight--default u-marginBottom--normal">{{ .title }}<p>
-									<p class="u-fontSize--large u-color--dustyGray u-lineHeight--normal">{{ .description }}<p>
-								</div>
-								<div class="flex1 flex-column chapter-block-tutorials-wrapper justifyContent--center">
-									<div class="chapter-block-tutorials">
-										{{ if gt (len .chapters) 7}}
-										<ul class="scrollable">
-										{{ else }}
-										<ul>
-										{{ end }}
-											{{ range .chapters }}
-												<li>
-													<a href="{{ .chapter_url }}" class="u-color--curiousBlue u-textDecoration--underlineOnHover">
-														{{ .chapter_title }}
-													</a>
-												</li>
-											{{ end }}
-										</ul>
+					<div class="guides-block-wrapper">
+						<div class="u-flexTabletReflow flex1 paddingContainer">
+							{{ range .Params.guides }}
+								<div class="guide-block-wrapper flex1">
+									<div class="guide-block">
+										<div class="icon-wrapper flex-column justifyContent--flexEnd alignItems--center">
+											<span class="icon u-{{ .level }}Wings"></span>
+										</div>
+										<div>
+											<p class="u-fontSize--largest u-color--tuna u-fontWeight--medium u-marginBottom--normal">{{ .title }}</p>
+											<p class="u-fontSize--normal u-color--dustyGray u-lineHeight--normal">{{ .description }}</p>
+										</div>
+										<div class="u-marginTop--more">
+											<a class="Button secondary" href="{{ .slug }}">View guide</a>
+										</div>
 									</div>
 								</div>
-							</div>
-						{{ end }}
+							{{ end }}
+						</div>
 					</div>
 				</div>
 			</div>
