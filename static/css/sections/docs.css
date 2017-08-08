@@ -36,6 +36,26 @@
   transform: translateX(3px);
 }
 
+
+.single-cat-docs-list li a {
+  padding: 20px;
+  border-bottom: 1px solid #C4C7CA;
+  cursor: pointer;
+  display: block;
+}
+.single-cat-docs-list li:last-child a {
+  border-bottom: none;
+}
+.single-cat-docs-list li a .list-title {
+  color: #323232;
+  -webkit-transition: color .2s;
+  -moz-transition: color .2s;
+  transition: color .2s;
+}
+.single-cat-docs-list li a:hover .list-title {
+  color: #2A98CB;
+}
+
 /* ≥ 568px */
 /* @media screen and (min-width: 35.5em) {
   
