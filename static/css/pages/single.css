@@ -204,7 +204,12 @@
     left: 0;
     top: 4px;
 }
-<<<<<<< HEAD
+
+.content .admonition.warning p.admonition-title::before {
+    background-position: -70px -154px;
+    width: 18px;
+    height: 17px;
+}
 
 @media screen and (max-width: 48em) {
     .single .container.flex {
@@ -218,11 +223,3 @@
         max-width: 100%;
     }
 }
-
-=======
-.content .admonition.warning p.admonition-title::before {
-    background-position: -70px -154px;
-    width: 18px;
-    height: 17px;
-}
->>>>>>> 2e6c88d704519a8ec93719d20f00cf9b928a37ca
