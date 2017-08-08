@@ -49,6 +49,11 @@
   width: 60px;
   height: 56px;
 }
+.icon.u-docsHeaderIcon {
+  background-position: -70px -96px;
+  width: 47px;
+  height: 56px;
+}
 
 .replicatedLogo {
   background-image: url("../../images/rep_logo@2x.png");
