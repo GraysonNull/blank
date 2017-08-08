@@ -22,6 +22,7 @@ The spec: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layo
 .flex4 { flex: 4; }
 .flex5 { flex: 5; }
 .flexWrap--wrap { flex-wrap: wrap; }
+.flexWrap--noWrap { flex-wrap: nowrap; }
 
 /* use .flex-verticalCenter on the element you want to center */
 .flex-verticalCenter::before,

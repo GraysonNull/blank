@@ -153,15 +153,11 @@
     color: #9B9B9B;
 }
 
-.single .container.flex {
-    flex-wrap: wrap;
-}
-
 .sidebar {
     padding: 0;
     margin-left: 0;
     margin-bottom: 20px;
-    max-width: 100%;
+    max-width: 180px;
 }
 
 .content .note.admonition {
