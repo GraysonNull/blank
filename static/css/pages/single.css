@@ -153,6 +153,10 @@
     color: #9B9B9B;
 }
 
+.content img {
+    max-width: 100%;
+}
+
 .single .container.flex {
     flex-wrap: wrap;
 }
@@ -164,8 +168,9 @@
     max-width: 100%;
 }
 
-.content .note.admonition {
 /* admonition notes */
+
+.content .admonition {
     background-color: #2A98CB;
     padding: 12px 20px;
     border-radius: 6px;
