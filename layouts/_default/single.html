@@ -20,13 +20,18 @@
 						{{ .Content }}
 					</div>
 				</div>
-				<div class="sidebar">
-				<ul id="tags">
-					{{ range .Params.tags }}
-					<li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> </li>
-					{{ end }}
-				</ul>
-			</div>
+				<div class="sidebar u-marginLeft--more u-marginTop--more">
+					<div>
+						<h3 class="u-fontWeight--medium u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Tags</h3>
+						<ul id="tags">
+						{{ range .Params.tags }}
+						<li class="u-display--inlineBlock">
+							<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="u-display--inlineBlock">{{ . }}</a>
+						</li>
+						{{ end }}
+					</ul>
+					</div>
+				</div>
 			</div>
 			<div>
 				{{ template "_internal/disqus.html" . }}

@@ -6,6 +6,7 @@
 .docs-ref-list .doc-ref-list-item {
   width: 100%;
   display: inline-block;
+  vertical-align: top;
 }
 .doc-ref {
   margin-top: 40px;
@@ -32,6 +33,13 @@
   background-color: #2A98CB;
   left: 10px;
   top: 6px;
+}
+
+.doc-ref .more-items {
+  display: inline-block;
+  padding: 5px 10px;
+  background: #fff;
+  border-radius: 4px;
 }
 
 /* ≥ 568px */
