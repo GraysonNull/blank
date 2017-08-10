@@ -9,7 +9,6 @@
 						</h1>
 						<p class="u-color--white u-fontSize--large u-lineHeight--normal">
 							{{ .Description }}
-							<span class="u-fontSize--small">(Last Updated {{ .Date.Format "02.01.2006 15:04" }})</span>
 						</p>
 					</div>
 				</div>
@@ -37,13 +36,14 @@
 					</div>
 					<div>
 						<h3 class="u-fontWeight--medium u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Tags</h3>
-						<ul id="tags">
+						<ul id="tags" class="u-marginBottom--more">
 							{{ range .Params.tags }}
 							<li class="u-display--inlineBlock">
 								<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="u-display--inlineBlock">{{ . }}</a>
 							</li>
 							{{ end }}
 						</ul>
+						<span class="u-fontSize--small u-color--silverSand u-fontWeight--medium">Last Updated <span class="u-fontWeight--bold u-color--dustyGray">{{ .Date.Format "02/01/2006" }}</span></span>
 					</div>
 				</div>
 			</div>
