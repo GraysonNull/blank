@@ -1,6 +1,5 @@
 {{ partial "header.html" . }}
-	<main>
-		<article class="single docs-page">
+<article class="single">
 			<div class="u-gradient--turquoiseToGreen main-section flex-column flex1 justifyContent--center">
 				<div class="container u-marginTop--most">
 					<div class="paddingContainer">
@@ -19,7 +18,11 @@
 			<div class="main-section">
 				<div class="container">
 					<div class="paddingContainer">
-						tags
+						<ul class="single-cat-docs-list">
+                        {{ range sort .Paginator.Pages }}
+                            {{ partial "summary.html" . }}
+                        {{ end }}
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -27,5 +30,5 @@
 				{{ template "_internal/disqus.html" . }}
 			</div>
 		</article>
-	</main>
-{{ partial "footer.html" . }}
+        {{ partial "pagination.html" . }}
+    {{ partial "footer.html" . }}
