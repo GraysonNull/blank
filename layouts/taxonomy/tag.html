@@ -1,6 +1,5 @@
 {{ partial "header.html" . }}
-	<main>
-		<article class="single docs-page">
+<article class="single">
 			<div class="u-gradient--turquoiseToGreen main-section flex-column flex1 justifyContent--center">
 				<div class="container u-marginTop--most">
 					<div class="paddingContainer">
@@ -17,20 +16,12 @@
 				</div>
 			</div>
 			<div class="main-section">
-				<div class="container flex">
+				<div class="container">
 					<div class="paddingContainer">
-						<ul class="docs-categories-list">
-							{{ range .Params.docs }}
-								<li>
-									<div class="doc-block">
-										<p class="u-fontSize--largest u-fontWeight--medium u-color--tuna u-marginBottom--normal">{{ .title }}</p>
-										<p class="u-fontSize--large u-color--dustyGray u-margin--none u-lineHeight--normal">{{ .description }}</p>
-										<div class="u-marginTop--more">
-											<a class="u-color--curiousBlue u-fontWeight--medium view-docs-link u-position--relative" href="{{ .slug }}">View docs</a>
-										</div>
-									</div>
-								</li>
-							{{ end }}
+						<ul class="single-cat-docs-list">
+                        {{ range sort .Paginator.Pages }}
+                            {{ partial "summary.html" . }}
+                        {{ end }}
 						</ul>
 					</div>
 				</div>
@@ -39,5 +30,5 @@
 				{{ template "_internal/disqus.html" . }}
 			</div>
 		</article>
-	</main>
-{{ partial "footer.html" . }}
+        {{ partial "pagination.html" . }}
+    {{ partial "footer.html" . }}
