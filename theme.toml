@@ -5,7 +5,6 @@ description = "Theme for the Replicated docs site."
 homepage = "https://github.com/replicatedhq/blank/"
 tags = []
 features = []
-min_version = 0.19
 
 [author]
   name = "Replicated"
