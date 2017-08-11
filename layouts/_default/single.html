@@ -15,36 +15,43 @@
 			</div>
 			<div class="container">
 				<div class="paddingContainer">
-					<div class="content">
-						{{ .Content }}
-					</div>
-				</div>
-				<div class="sidebar u-marginLeft--more u-marginTop--more">
-					<div class="u-marginTop--more u-marginBottom--more">
-						<h3 class="u-fontWeight--medium u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Similar guides</h3>
-						<ul>
-							<li class="u-paddingBottom--normal u-fontSize--normal">
-								<a href="" class="u-color--curiousBlue ">Test Link</a>
-							</li>
-							<li class="u-paddingBottom--normal u-fontSize--normal">
-								<a href="" class="u-color--curiousBlue ">Test Link</a>
-							</li>
-							<li class="u-paddingBottom--normal u-fontSize--normal">
-								<a href="" class="u-color--curiousBlue ">Test Link</a>
-							</li>
-						</ul>
-					</div>
-					<div>
-						<h3 class="u-fontWeight--medium u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Tags</h3>
-						<ul id="tags">
-							{{ if .Params.tags }}
-								{{ range .Params.tags }}
-									<li class="u-display--inlineBlock">
-										<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="u-display--inlineBlock">{{ . }}</a>
-									</li>
-								{{ end }}
-							{{ end }}
-						</ul>
+					<div class="u-flexTabletReflow flex1">
+						<div class="flex1 page-content-wrapper">
+							<div class="page-content">
+								{{ .Content }}
+							</div>
+						</div>
+						<div class="flex-auto sidebar-wrapper">
+							<div class="sidebar">
+								<div class="u-marginTop--more u-marginBottom--more">
+									<h3 class="u-fontWeight--medium u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Similar guides</h3>
+									<ul>
+										<li class="u-paddingBottom--normal u-fontSize--normal">
+											<a href="" class="u-color--curiousBlue ">Test Link</a>
+										</li>
+										<li class="u-paddingBottom--normal u-fontSize--normal">
+											<a href="" class="u-color--curiousBlue ">Test Link</a>
+										</li>
+										<li class="u-paddingBottom--normal u-fontSize--normal">
+											<a href="" class="u-color--curiousBlue ">Test Link</a>
+										</li>
+									</ul>
+								</div>
+								<div>
+									<h3 class="u-fontWeight--medium u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Tags</h3>
+									<ul id="tags" class="u-marginBottom--more">
+										{{ if .Params.tags }}
+											{{ range .Params.tags }}
+												<li class="u-display--inlineBlock">
+													<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="u-display--inlineBlock">{{ . }}</a>
+												</li>
+											{{ end }}
+										{{ end }}
+									</ul>
+									<span class="u-fontSize--small u-color--silverSand u-fontWeight--medium">Last Updated <span class="u-fontWeight--bold u-color--dustyGray">{{ .Date.Format "02/01/2006" }}</span></span>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
