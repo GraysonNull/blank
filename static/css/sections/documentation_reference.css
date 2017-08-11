@@ -37,9 +37,17 @@
 
 .doc-ref .more-items {
   display: inline-block;
-  padding: 5px 10px;
+  padding: 4px 8px 5px;
   background: #fff;
   border-radius: 4px;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.doc-ref .more-items:hover {
+  text-decoration: underline;
 }
 
 /* ≥ 568px */
