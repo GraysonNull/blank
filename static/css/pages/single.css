@@ -25,57 +25,61 @@
 }
 
 #tags li a {
-    padding: 5px 10px;
+    padding: 4px 10px 5px;
     background: #F5F8FC;
     border: solid 1px #979797;
     border-radius: 2px;
     margin: 4px 2px;
-    font-size: 10px;
-    color: #979797;
+    font-size: 11px;
+    font-weight: 500;
+    color: #9B9B9B;
 }
 
-.content {
+.page-content {
     padding: 50px 0;
     max-width: 720px;
 }
 
-.content h2 {
+.page-content h2 {
     font-size: 20px;
     font-weight: 500;
     margin: 20px 0;
 }
 
-.content h3 {
+.page-content h3 {
     font-size: 16px;
     font-weight: 500;
     margin: 20px 0;
 }
 
-.content p {
+.page-content p {
     font-size: 14px;
     color: #9B9B9B;
     line-height: 22px;
     margin: 20px 0;
 }
 
-.content a {
+.page-content a {
     color: #2A98CB;
     font-weight: 500;
 }
-.content a:hover {
+.page-content a:hover {
     text-decoration: underline;
 }
 
-.content pre {
+.page-content pre {
     padding: 20px;
     margin: 40px 0;
     background-color: #f9f2f4;
     overflow: scroll;
-    border-radius: 6px;
+    border-radius: 4px;
     border: 1px solid #C4C7CA;
+    line-height: 1.4;
+    color: #c7254e;
+    font-family: "Monaco", "Helvetica Neue", "Helvetica", sans-serif;
 }
 
-.content table {
+.page-content table {
     border-radius: 6px;
     border-collapse: initial;
     border: solid 1px #C4C7CA;
@@ -83,33 +87,37 @@
     overflow: hidden;
 }
 
-.content table thead {
+.page-content table p {
+    margin: 0;
+}
+
+.page-content table thead {
     background: #F5F8FC;
     text-align: left;
 }
 
-.content table thead th {
+.page-content table thead th {
     font-weight: 500;
     border-bottom: solid 1px #C4C7CA;
 }
 
-.content table td {
+.page-content table td {
     color: #9B9B9B;
     border-bottom: solid 1px #C4C7CA;
 }
 
-.content tbody tr:last-child td {
+.page-content tbody tr:last-child td {
     border: 0;
 }
 
-.content table th,
-.content table td {
+.page-content table th,
+.page-content table td {
     padding: 15px 20px;
     font-size: 14px;
     line-height: 22px;
 }
 
-.content .page-notes {
+.page-content .page-notes {
     padding: 15px 20px;
     background: #F7F7F7;
     border: 1px solid #C4C7CA;
@@ -120,70 +128,64 @@
     border-radius: 6px;
 }
 
-.content .page-notes h3 {
+.page-content .page-notes h3 {
     font-size: 18px;
     color: #323232;
     margin: 0 0 6px;
 }
 
-.content ul,
-.content ol {
+.page-content ul,
+.page-content ol {
     padding-left: 20px;
 }
 
-.content ul {
+.page-content ul {
     list-style-type: disc;
 }
 
-.content ol {
+.page-content ol {
     list-style-type: decimal;
 }
 
-.content ul li ,
-.content ol li {
+.page-content ul li ,
+.page-content ol li {
     padding: 10px 0;
     font-size: 14px;
     line-height: 22px;
     color: #9B9B9B;
 }
 
-.content img {
+.page-content img {
     max-width: 100%;
 }
 
-.single .container.flex {
-    flex-wrap: wrap;
-}
-
 .sidebar {
-    margin-left: 0;
     width: 100%;
     margin-bottom: 20px;
-    max-width: 180px;
-    padding: 30px 0;
+    padding: 10px 0;
 }
 
 /* admonition notes */
 
-.content .admonition {
+.page-content .admonition {
     background-color: #2A98CB;
     padding: 12px 20px;
     border-radius: 6px;
 }
-.content .admonition.warning {
+.page-content .admonition.warning {
     background-color: #F9B84E;
 }
-.content .admonition p {
+.page-content .admonition p {
     color: #ffffff;
     font-size: 14px;
     line-height: 22px;
     margin: 0;
 }
-.content .admonition a {
+.page-content .admonition a {
     color: #ffffff;
     text-decoration: underline;
 }
-.content .admonition p.admonition-title {
+.page-content .admonition p.admonition-title {
     font-size: 18px;
     font-weight: 500;
     line-height: 26px;
@@ -191,7 +193,7 @@
     padding-left: 22px;
     position: relative;
 }
-.content .admonition p.admonition-title::before {
+.page-content .admonition p.admonition-title::before {
     background-image: url("../../images/main_spritesheet.svg");
     background-repeat: no-repeat;
     background-size: initial;
@@ -199,27 +201,30 @@
     background-position: -70px -74px;
     width: 13px;
     height: 20px;
-    content: "";
+    page-content: "";
     position: absolute;
     left: 0;
     top: 4px;
 }
 
-.content .admonition.warning p.admonition-title::before {
+.page-content .admonition.warning p.admonition-title::before {
     background-position: -70px -154px;
     width: 18px;
     height: 17px;
 }
 
-@media screen and (max-width: 48em) {
-    .single .container.flex {
-        flex-wrap: wrap;
+@media screen and (min-width: 48em) {
+    .page-content-wrapper {
+        padding-right: 30px;
+        width: 74%
     }
-
+    .sidebar-wrapper {
+        width: 24%;
+    }
+    .page-content {
+        padding: 50px 0;
+    }
     .sidebar {
-        padding: 0;
-        margin-left: 0;
-        margin-bottom: 20px;
-        max-width: 100%;
+        max-width: 180px;
     }
 }
