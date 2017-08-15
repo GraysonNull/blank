@@ -17,7 +17,9 @@
 					<div class="paddingContainer">
 						<ul class="single-cat-docs-list">
                         {{ range sort .Pages }}
-                            {{ partial "summary.html" . }}
+                            {{ if not .Params.hideFromList }}
+                                {{ partial "summary.html" . }}
+                            {{ end }}
                         {{ end }}
 						</ul>
 					</div>
