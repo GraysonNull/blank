@@ -20,17 +20,19 @@
 				<div class="container flex">
 					<div class="paddingContainer">
 						<ul class="docs-categories-list">
-							{{ range .Params.docs }}
-								<li>
-									<div class="doc-block">
-										<p class="u-fontSize--largest u-fontWeight--medium u-color--tuna u-marginBottom--normal">{{ .title }}</p>
-										<p class="u-fontSize--large u-color--dustyGray u-margin--none u-lineHeight--normal">{{ .description }}</p>
-										<div class="u-marginTop--more">
-											<a class="u-color--curiousBlue u-fontWeight--medium view-docs-link u-position--relative" href="{{ .slug }}">View docs</a>
-										</div>
-									</div>
-								</li>
-							{{ end }}
+							{{ range ($.Site.GetPage "taxonomyTerm" "categories").Pages }}
+                                {{ if not .Params.hideSection }}
+                                    <li>
+                                        <div class="doc-block">
+                                            <p class="u-fontSize--largest u-fontWeight--medium u-color--tuna u-marginBottom--normal">{{ .Title }}</p>
+                                            <p class="u-fontSize--large u-color--dustyGray u-margin--none u-lineHeight--normal">{{ .Description }}</p>
+                                            <div class="u-marginTop--more">
+                                                <a class="u-color--curiousBlue u-fontWeight--medium view-docs-link u-position--relative" href="{{ .Permalink }}">View docs</a>
+                                            </div>
+                                        </div>
+								    </li>
+                                {{ end }}
+                            {{ end }}
 						</ul>
 					</div>
 				</div>

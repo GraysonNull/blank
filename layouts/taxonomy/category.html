@@ -8,8 +8,8 @@
 								<span class="icon u-docsHeaderIcon u-marginRight--normal"></span>
 							</div>
 							<div class="flex-auto">
-								<h3 class="u-color--white u-fontWeight--bold u-fontSize--header">Documentation</h3>
-								<p class="u-fontSize--normal u-fontWeight--medium u-color--white u-marginTop--small">Quickly find docs for whatever you need help with.</p>
+								<h3 class="u-color--white u-fontWeight--bold u-fontSize--header">{{ .Title }}</h3>
+                                <p class="u-fontSize--normal u-fontWeight--medium u-color--white u-marginTop--small">{{ .Description }}</p>
 							</div>
 						</div>
 					</div>
@@ -19,7 +19,7 @@
 				<div class="container">
 					<div class="paddingContainer">
 						<ul class="single-cat-docs-list">
-                        {{ range sort .Paginator.Pages }}
+                        {{ range sort .Pages }}
                             {{ partial "summary.html" . }}
                         {{ end }}
 						</ul>
@@ -30,5 +30,4 @@
 				{{ template "_internal/disqus.html" . }}
 			</div>
 		</article>
-        {{ partial "pagination.html" . }}
     {{ partial "footer.html" . }}
