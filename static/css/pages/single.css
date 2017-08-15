@@ -194,6 +194,7 @@
     position: relative;
 }
 .page-content .admonition p.admonition-title::before {
+    content: "";
     background-image: url("../../images/main_spritesheet.svg");
     background-repeat: no-repeat;
     background-size: initial;
@@ -201,7 +202,6 @@
     background-position: -70px -74px;
     width: 13px;
     height: 20px;
-    page-content: "";
     position: absolute;
     left: 0;
     top: 4px;
@@ -220,6 +220,7 @@
     }
     .sidebar-wrapper {
         width: 24%;
+        margin-top: 20px;
     }
     .page-content {
         padding: 50px 0;

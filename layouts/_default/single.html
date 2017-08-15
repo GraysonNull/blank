@@ -24,30 +24,32 @@
 						<div class="flex-auto sidebar-wrapper">
 							<div class="sidebar">
 								<div class="u-marginTop--more u-marginBottom--more">
-									<h3 class="u-fontWeight--medium u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Similar guides</h3>
-									<ul>
-										<li class="u-paddingBottom--normal u-fontSize--normal">
-											<a href="" class="u-color--curiousBlue ">Test Link</a>
-										</li>
-										<li class="u-paddingBottom--normal u-fontSize--normal">
-											<a href="" class="u-color--curiousBlue ">Test Link</a>
-										</li>
-										<li class="u-paddingBottom--normal u-fontSize--normal">
-											<a href="" class="u-color--curiousBlue ">Test Link</a>
-										</li>
-									</ul>
+									{{ if .Params.similar }}
+										<h3 class="u-fontWeight--medium u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Similar guides</h3>
+										<ul>
+											{{ with $similarDocs := .Params.similar }}
+												{{ range $similarDocs }}
+													{{ with ($.Site.GetPage "page" .) }}
+														<li class="u-paddingBottom--normal u-fontSize--normal">
+															<a href="{{ .Permalink }}" class="u-color--curiousBlue u-fontWeight--medium u-textDecoration--underlineOnHover">{{ .Title }}</a>
+														</li>
+													{{ end }}
+												{{ end }}
+											{{ end }}
+										</ul>
+									{{ end }}
 								</div>
 								<div>
-									<h3 class="u-fontWeight--medium u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Tags</h3>
-									<ul id="tags" class="u-marginBottom--more">
-										{{ if .Params.tags }}
+									{{ if .Params.tags }}
+										<h3 class="u-fontWeight--medium u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Tags</h3>
+										<ul id="tags" class="u-marginBottom--more">
 											{{ range .Params.tags }}
 												<li class="u-display--inlineBlock">
 													<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="u-display--inlineBlock">{{ . }}</a>
 												</li>
 											{{ end }}
-										{{ end }}
-									</ul>
+										</ul>
+									{{ end }}
 									<span class="u-fontSize--small u-color--silverSand u-fontWeight--medium">Last Updated <span class="u-fontWeight--bold u-color--dustyGray">{{ .Date.Format "02/01/2006" }}</span></span>
 								</div>
 							</div>
