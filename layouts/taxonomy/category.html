@@ -14,9 +14,16 @@
 			</div>
 			<div class="main-section">
 				<div class="container">
+					{{ with .Content }}
+						<div class="paddingContainer">
+							<div class="u-paddingBottom--more category-content">
+								{{ . }}
+							</div>
+						</div>
+					{{ end }}
 					<div class="paddingContainer">
 						<ul class="single-cat-docs-list">
-                        {{ range sort .Pages }}
+                        {{ range sort .Pages.ByWeight }}
                             {{ if not .Params.hideFromList }}
                                 {{ partial "summary.html" . }}
                             {{ end }}

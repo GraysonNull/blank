@@ -52,14 +52,16 @@
     margin: 20px 0;
 }
 
-.page-content p {
+.page-content p,
+.category-content p {
     font-size: 14px;
     color: #9B9B9B;
     line-height: 22px;
     margin: 20px 0;
 }
 
-.page-content a {
+.page-content a,
+.category-content a {
     color: #2A98CB;
     font-weight: 500;
 }
