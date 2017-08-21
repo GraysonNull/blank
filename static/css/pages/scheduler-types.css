@@ -1,0 +1,61 @@
+.scheduler-type .logo {
+  margin-bottom: 25px;
+}
+.scheduler-type h5 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #323232;
+  line-height: 32px;
+  margin-bottom: 20px;
+}
+.scheduler-type h6 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #323232;
+  line-height: 26px;
+  margin-bottom: 6px;
+}
+.scheduler-type p {
+  font-size: 16px;
+  color: #9B9B9B;
+  line-height: 24px;
+  margin-bottom: 18px;
+}
+.scheduler-type p:last-child {
+  margin-bottom: 0;
+}
+.pros-list {
+  margin-top: 40px;
+}
+.scheduler-type li {
+  list-style-type: none;
+  padding-left: 45px;
+  padding-bottom: 30px;
+  position: relative;
+}
+.scheduler-type li:last-child {
+  padding-bottom: 0;
+}
+.scheduler-type li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  background-color: #326DE6;
+  border-radius: 100%;
+}
+
+/* ≥ 768px */
+@media screen and (min-width: 48em) {
+  .scheduler-type .left-content {
+    padding-right: 50px;
+  }
+  .scheduler-type .right-content {
+    padding-left: 50px;
+  }
+  .pros-list {
+    margin-top: 0;
+  }
+}
