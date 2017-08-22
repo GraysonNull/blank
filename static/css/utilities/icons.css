@@ -59,25 +59,38 @@
   width: 47px;
   height: 56px;
 }
+.icon.u-greenCheckCircle {
+  background-position: -70px -194px;
+  width: 20px;
+  height: 20px;
+}
+.icon.u-grayFailCircle {
+  background-position: -70px -216px;
+  width: 20px;
+  height: 20px;
+}
 
 .replicatedLogo {
   background-image: url("../../images/rep_logo@2x.png");
   background-repeat: no-repeat;
   background-size: 100%;
-  width: 180px;
-  height: 41px;
+  width: 140px;
+  height: 33px;
+  display: block;
 }
 .kubernetesLogo {
   background-image: url("../../images/kubernetes_logo@2x.png");
   background-repeat: no-repeat;
   background-size: 100%;
-  width: 92px;
-  height: 89px;
+  width: 70px;
+  height: 67px;
+  display: block;
 }
 .dockerSwarmLogo {
   background-image: url("../../images/ds_logo@2x.png");
   background-repeat: no-repeat;
   background-size: 100%;
-  width: 101px;
-  height: 79px;
+  width: 75px;
+  height: 60px;
+  display: block;
 }

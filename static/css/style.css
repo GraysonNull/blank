@@ -10,6 +10,7 @@
 
 @import "./pages/instantsearch.css";
 @import "./pages/single.css";
+@import "./pages/scheduler-types.css";
 @import "./sections/header.css";
 @import "./sections/footer.css";
 @import "./sections/search.css";

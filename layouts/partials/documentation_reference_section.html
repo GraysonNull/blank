@@ -14,7 +14,7 @@
               <ul>
                 {{ range $index, $element := first 6 (index $.Site.Taxonomies.categories "getting-started").Pages }}
                   <li>
-                    <a href="{{ .Permalink }}" class="u-color--curiousBlue u-textDecoration--underlineOnHover">{{ .Title }}</a>
+                    <a href="{{ .Permalink }}" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">{{ .Title }}</a>
                   </li>
                 {{ end }}
               </ul>
@@ -31,7 +31,7 @@
               <ul>
                 {{ range $index, $element := first 6 (index $.Site.Taxonomies.categories "packaging-an-application").Pages }}
                   <li>
-                    <a href="{{ .Permalink }}" class="u-color--curiousBlue u-textDecoration--underlineOnHover">{{ .Title }}</a>
+                    <a href="{{ .Permalink }}" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">{{ .Title }}</a>
                   </li>
                 {{ end }}
               </ul>
@@ -48,7 +48,7 @@
               <ul>
                 {{ range $index, $element := first 6 (index $.Site.Taxonomies.categories "distributing-an-application").Pages }}
                   <li>
-                    <a href="{{ .Permalink }}" class="u-color--curiousBlue u-textDecoration--underlineOnHover">{{ .Title }}</a>
+                    <a href="{{ .Permalink }}" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">{{ .Title }}</a>
                   </li>
                 {{ end }}
               </ul>
@@ -65,7 +65,7 @@
               <ul>
                 {{ range $index, $element := first 6 ($.Site.Taxonomies.categories.examples).Pages }}
                   <li>
-                    <a href="{{ .Permalink }}" class="u-color--curiousBlue u-textDecoration--underlineOnHover">{{ .Title }}</a>
+                    <a href="{{ .Permalink }}" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">{{ .Title }}</a>
                   </li>
                 {{ end }}
               </ul>
@@ -82,7 +82,7 @@
               <ul>
                 {{ range $index, $element := ($.Site.Taxonomies.categories.reference).Pages }}
                   <li>
-                    <a href="{{ .Permalink }}" class="u-color--curiousBlue u-textDecoration--underlineOnHover">{{ .Title }}</a>
+                    <a href="{{ .Permalink }}" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">{{ .Title }}</a>
                   </li>
                 {{ end }}
               </ul>
@@ -99,7 +99,7 @@
               <ul>
                 {{ range $index, $element := first 6 ($.Site.Taxonomies.categories.knowledgebase).Pages }}
                   <li>
-                    <a href="{{ .Permalink }}" class="u-color--curiousBlue u-textDecoration--underlineOnHover">{{ .Title }}</a>
+                    <a href="{{ .Permalink }}" class="u-color--curiousBlue u-textDecoration--underlineOnHover u-lineHeight--normal">{{ .Title }}</a>
                   </li>
                 {{ end }}
               </ul>

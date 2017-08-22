@@ -64,6 +64,7 @@ The spec: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layo
 /* ≥ 768px */
 @media screen and (min-width: 48em) {
 	.u-flexTabletReflow { flex-direction: row; }
+	.u-flexTabletReflow.flexDirection--rowReverse { flex-direction: row-reverse }
 }
 
 /* ≥ 1024px */
