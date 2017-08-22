@@ -47,6 +47,42 @@
   border-radius: 100%;
 }
 
+.compare-section {
+  background-color: #F5F8FC;
+}
+
+.compare-section .table-section-wrapper {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.16);
+  overflow: auto;
+}
+.compare-section table {
+  width: 100%;
+  table-layout: fixed;
+  min-width: 600px;
+}
+.compare-section table th span {
+  margin: 0 auto;
+}
+.compare-section table th {
+  padding-bottom: 30px;
+  vertical-align: middle;
+}
+.compare-section table tbody tr td {
+  padding: 14px 0;
+  vertical-align: middle;
+  border-bottom: 1px solid #C4C7CA;
+}
+.compare-section table tbody tr:last-child td {
+  padding: 14px 0 0 0;
+  border-bottom: none;
+}
+.compare-section table tbody tr td.icon-cell {
+  text-align: center;
+}
+
 /* ≥ 768px */
 @media screen and (min-width: 48em) {
   .scheduler-type .left-content {

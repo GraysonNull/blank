@@ -59,6 +59,16 @@
   width: 47px;
   height: 56px;
 }
+.icon.u-greenCheckCircle {
+  background-position: -70px -194px;
+  width: 20px;
+  height: 20px;
+}
+.icon.u-grayFailCircle {
+  background-position: -70px -216px;
+  width: 20px;
+  height: 20px;
+}
 
 .replicatedLogo {
   background-image: url("../../images/rep_logo@2x.png");
@@ -66,6 +76,7 @@
   background-size: 100%;
   width: 140px;
   height: 33px;
+  display: block;
 }
 .kubernetesLogo {
   background-image: url("../../images/kubernetes_logo@2x.png");
@@ -73,6 +84,7 @@
   background-size: 100%;
   width: 70px;
   height: 67px;
+  display: block;
 }
 .dockerSwarmLogo {
   background-image: url("../../images/ds_logo@2x.png");
@@ -80,4 +92,5 @@
   background-size: 100%;
   width: 75px;
   height: 60px;
+  display: block;
 }
