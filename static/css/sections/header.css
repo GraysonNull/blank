@@ -56,6 +56,11 @@ nav ul ul.show {
     padding: 0;
     margin-right: 30px;
   }
+  .log-in-link {
+    position: absolute;
+    right: 30px;
+    top: 3px;
+  }
   nav ul li:last-child {
     margin-right: 0;
   }
