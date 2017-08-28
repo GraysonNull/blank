@@ -1,6 +1,10 @@
 {{ partial "header.html" . }}
 <article class="single">
-			<div class="u-gradient--turquoiseToGreen main-section flex-column flex1 justifyContent--center">
+			{{ if .Params.gradient }}
+				<div class="u-gradient--{{ .Params.gradient }} main-section flex-column flex1 justifyContent--center">
+			{{ else }}
+				<div class="u-gradient--turquoiseToGreen main-section flex-column flex1 justifyContent--center">
+			{{ end }}
 				<div class="container u-marginTop--most">
 					<div class="paddingContainer">
 						<div class="flex flex-auto justifyContent--center u-marginTop--more">
