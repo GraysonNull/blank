@@ -22,7 +22,7 @@
                 <div class='flex1 flex-column u-paddingLeft--most flex-verticalCenter {{ if eq .type "kubernetes"}} left-content {{ else }} right-content {{ end }}'>
                   <ul class="pros-list">
                     {{ range .features }}
-                      <li>
+                      <li class="u-{{ .iconClass }}">
                         <h6>{{ .title }}</h6>
                         <p>{{ .description }}</p>
                       </li>
